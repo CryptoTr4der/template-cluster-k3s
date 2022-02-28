@@ -1,0 +1,7 @@
+---
+# (string) The interface on the host kube-vip should attach to
+kubevip_interface: "${BOOTSTRAP_KUBE_VIP_INTERFACE}"
+# (string) The ARP address kube-vip broadcasts
+kubevip_address: "${BOOTSTRAP_KUBE_VIP_ADDRESS}"
+# (string) The IP address range kube-vip can use for services
+kubevip_lb_range: "${BOOTSTRAP_KUBE_VIP_LB_RANGE}"
