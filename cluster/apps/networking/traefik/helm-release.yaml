@@ -53,6 +53,7 @@ spec:
         enabled: false
     globalArguments:
       - "--api.insecure=true"
+      - "--pilot.token=633d91f0-194f-4000-b1a2-9010c7694e04"
       - "--serverstransport.insecureskipverify=true"
       - "--providers.kubernetesingress.ingressclass=traefik"
       - "--metrics.prometheus=true"
