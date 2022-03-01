@@ -14,7 +14,7 @@ k3s_install_hard_links: true
 k3s_become: true
 
 # (bool) Enable debug logging on the k3s service
-k3s_debug: false
+k3s_debug: true
 
 # (bool) Enable etcd embedded datastore
 k3s_etcd_datastore: true

@@ -28,7 +28,7 @@ spec:
             - name: vip_arp
               value: "true"
             - name: vip_interface
-              value: "${BOOTSTRAP_ANSIBLE_KUBE_VIP_INTERFACE}"
+              value: "eth0"
             - name: port
               value: "6443"
             - name: vip_cidr
@@ -38,14 +38,23 @@ spec:
             - name: cp_namespace
               value: kube-system
             - name: svc_enable
-              value: "false"
+              value: "true"
+            - name: vip_leaderelection
+              value: "true"
+            - name: vip_leaseduration
+              value: "5"
+            - name: vip_renewdeadline
+              value: "3"
+            - name: vip_retryperiod
+              value: "1"
             - name: address
-              value: "${BOOTSTRAP_ANSIBLE_KUBE_VIP_ADDRESS}"
+              value: "10.10.30.254"
           securityContext:
             capabilities:
               add:
                 - NET_ADMIN
                 - NET_RAW
+                - SYS_TIME
       hostAliases:
         - hostnames:
             - kubernetes

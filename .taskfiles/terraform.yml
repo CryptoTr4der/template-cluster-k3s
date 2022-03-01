@@ -20,3 +20,21 @@ tasks:
     dir: provision/terraform/cloudflare
     cmds:
       - "terraform apply"
+
+  init:create-pve-nodes:
+    desc: Initialize terraform
+    dir: provision/terraform/pve
+    cmds:
+      - "terraform init"
+
+  plan:create-pve-nodes:
+    desc: Prepare k3s nodes on proxmox
+    dir: provision/terraform/pve
+    cmds:
+      - "terraform plan"
+
+  apply:create-pve-nodes:
+    desc: Create k3s nodes on proxmox
+    dir: provision/terraform/pve
+    cmds:
+      - "terraform apply"
